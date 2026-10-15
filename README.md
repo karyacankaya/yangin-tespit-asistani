@@ -1,4 +1,3 @@
-# yangin-tespit-asistani
 🔥 Yangın Tespit ve Müdahale Asistanı
 
 Kalabalık binalarda sensör + kamera verisini birleştirip yangını erken tespit eden ve personele adım adım müdahale rehberliği yapan yapay zekâ asistanı.
