@@ -1,0 +1,7 @@
+*.csv
+*.zip
+*.pt
+*.joblib
+__pycache__/
+.env
+.DS_Store
