@@ -1,14 +1,21 @@
-🔥 Yangın Tespit ve Müdahale Asistanı
+# 🔥 Yangın Tespit ve Müdahale Asistanı
 
-Kalabalık binalarda sensör + kamera verisini birleştirip yangını erken tespit eden ve personele adım adım müdahale rehberliği yapan yapay zekâ asistanı.
+**Kalabalık binalarda sensör + kamera verisini birleştirip yangını erken tespit eden ve personele adım adım müdahale rehberliği yapan yapay zekâ asistanı.**
 
-👥 Ekip
-Büşra Şen
-Halime Karya Çankaya
-Gizem Beklen
-Ecem topcu
+---
 
-📁 Klasör Yapısı
+## 👥 Ekip
+
+- Büşra Şen
+- Halime Karya Çankaya
+- Gizem Beklen
+- Ecem Topcu
+
+---
+
+## 📁 Klasör Yapısı
+
+```
 yangin-tespit-asistani/
 ├── app/            # Streamlit web arayüzü
 ├── src/            # Çekirdek kod (modeller, füzyon, asistan)
@@ -20,7 +27,11 @@ yangin-tespit-asistani/
 ├── docs/
 │   └── vize/       # Vize teslim belgeleri
 └── README.md
+```
 
-📦 Veri setleri ve model dosyaları GitHub'da değildir. Boyutları nedeniyle ekibin ortak Google Drive klasöründe tutulur. Drive linki: YanginProjesi klasörü
+> 📦 **Veri setleri ve model dosyaları GitHub'da değildir.** Boyutları nedeniyle ekibin ortak Google Drive klasöründe tutulur.
+> Drive linki: [YanginProjesi klasörü](https://drive.google.com/drive/u/0/folders/1ROSX4iXgNkw5IpC1Be5XCxi3V6MiOJqO)
 
-Bu proje, Veri Madenciliği ve İş Zekâsı dersi kapsamında Güz 2026 döneminde geliştirilmektedir.
+---
+
+*Bu proje, **Veri Madenciliği ve İş Zekâsı** dersi kapsamında Güz 2026 döneminde geliştirilmektedir.*
