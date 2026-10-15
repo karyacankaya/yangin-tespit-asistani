@@ -1,0 +1,8 @@
+[
+    {"saniye": 0, "sensor_satiri": {"Temperature[C]": 23.0, "Humidity[%]": 52.0, "TVOC[ppb]": 130, "eCO2[ppm]": 415, "PM2.5": 1.5}, "kare": "s2_kare_00.jpg", "sahte_p_sensor": 0.08, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.02}},
+    {"saniye": 1, "sensor_satiri": {"Temperature[C]": 24.5, "Humidity[%]": 64.0, "TVOC[ppb]": 180, "eCO2[ppm]": 430, "PM2.5": 6.0}, "kare": "s2_kare_01.jpg", "sahte_p_sensor": 0.25, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.05}},
+    {"saniye": 2, "sensor_satiri": {"Temperature[C]": 26.0, "Humidity[%]": 78.0, "TVOC[ppb]": 260, "eCO2[ppm]": 450, "PM2.5": 14.0}, "kare": "s2_kare_02.jpg", "sahte_p_sensor": 0.52, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.10}},
+    {"saniye": 3, "sensor_satiri": {"Temperature[C]": 27.1, "Humidity[%]": 88.0, "TVOC[ppb]": 340, "eCO2[ppm]": 465, "PM2.5": 22.0}, "kare": "s2_kare_03.jpg", "sahte_p_sensor": 0.74, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.12}},
+    {"saniye": 4, "sensor_satiri": {"Temperature[C]": 27.5, "Humidity[%]": 91.0, "TVOC[ppb]": 360, "eCO2[ppm]": 470, "PM2.5": 25.0}, "kare": "s2_kare_04.jpg", "sahte_p_sensor": 0.78, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.15}},
+    {"saniye": 5, "sensor_satiri": {"Temperature[C]": 27.6, "Humidity[%]": 92.0, "TVOC[ppb]": 365, "eCO2[ppm]": 472, "PM2.5": 26.0}, "kare": "s2_kare_05.jpg", "sahte_p_sensor": 0.79, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.14}}
+  ]
