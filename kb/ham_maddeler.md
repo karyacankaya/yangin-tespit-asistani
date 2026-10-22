@@ -7,7 +7,7 @@ Tam metin: 1. İnsanlar tarafından kullanılmak üzere tasarlanan her yapı, ya
 5. Her çıkışın açıkça görünecek şekilde yapılması, ayrıca, çıkışa götüren yolun, sağlıklı her kullanıcının herhangi bir noktadan kaçacağı doğrultuyu kolayca anlayabileceği biçimde görünür olması gerekir. Çıkış niteliği taşımayan herhangi bir kapı veya bir çıkışa götüren yol gerçek çıkışla karıştırılmayacak şekilde düzenlenir veya işaretlenir. Bir yangın hâlinde veya herhangi bir acil durumda, kullanıcıların yanlışlıkla çıkmaz alanlara girmemeleri ve kullanılan odalardan ve mekânlardan geçmek zorunda kalmaksızın bir çıkışa veya çıkışlara doğrudan erişmeleri için gerekli tedbirler alınır.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı:  Kaçış yollarını ve çıkış kapılarını açık, kilitsiz ve engelsiz tutun.
+Eylem adımı (taslak): Çıkış kapılarındaki kilitleri ve turnikeleri hemen açın.
 
 ## Madde 34 — Yangın güvenlik holü
 Özet: Yangın güvenlik holleri dumanın kaçış merdivenlerine geçmesini önlemek ve tahliye ile kurtarma faaliyetlerini kolaylaştırmak için düzenlenir.
@@ -21,30 +21,16 @@ Tam metin: 1. Yangın güvenlik holleri; kaçış merdivenlerine dumanın geçi�
 8. Yangın güvenlik hollerinin kullanmaya uygun şekilde boş bulundurulmasından, bina veya işyeri sahibi ve yöneticileri sorumludur.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Yürüyemeyen yaralı veya engelli kişileri itfaiye gelene kadar merdiven önündeki yangın güvenlik koridorunda bekletin.
+Eylem adımı (taslak): Yürüyemeyen yaralı veya engelli kişileri itfaiye gelene kadar merdiven önündeki yangın güvenlik holünde bekletin.
 
 ## Madde 35 — Kaçış yolları gerekleri
 Özet: Zorunlu çıkışlar her zaman erişilebilir ve önleri engelsiz olacak şekilde kullanılabilir durumda tutulmalıdır.
 Tam metin: 1. Bütün yapılar için bu Kısımda belirtilen imkânlardan biri veya daha fazlası kullanılarak kaçış yolları sağlanır. Yapının kullanımda olduğu sürece zorunlu çıkışların kolayca erişilebilir, kapıların açılabilecek durumda olması ve önlerinde engelleyicilerin bulunmaması gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı:Kaçış yollarındaki engelleri kaldırın ve çıkış kapılarını kullanılabilir durumda tutun.
+Eylem adımı (taslak): Çıkış kapılarının önündeki her engeli hemen kaldırın.
 
-<<<<<<< HEAD
-Madde 37 — Dış kaçış geçitleri
-
-Özet: İç koridor yerine dış geçit kullanılabilir ancak geçitteki duvar boşlukları yangın güvenliğini tehlikeye atmayacak şekilde düzenlenmelidir.
-Tam metin: 1. Kaçış yolu olarak, bir iç koridor yerine dış geçit kullanılabilir. Ancak, dış geçide bitişik yapı dış duvarında düzenlenecek duvar boşluklarına konulacak menfezlerin yanmaz nitelikte olması, boşluğun parapet üst kotu ile döşeme bitmiş kotu arasında 1,8 m veya daha fazla yükseklikte kalması ve bu tür havalandırma boşluklarının bir kaçış merdivenine ait herhangi bir duvar boşluğuna 3,0 m’den daha yakın olmaması şarttır.
-2. Bir dış geçide açılan çıkış kapısının, yangına karşı 30 dakika dayanıklı olması ve kendiliğinden kapatan düzenekler ile donatılması gerekir.
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Dış kaçış geçidini ve geçiş yolunu engelsiz tutun.
-
-Madde 38 — Kaçış merdivenleri
-
-=======
 ## Madde 38 — Kaçış merdivenleri
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 Özet: Kaçış merdivenleri yangın sırasında güvenli tahliyenin bir parçası olarak korunmuş ve sürekli kullanılabilir durumda olmalıdır.
 Tam metin: 1. Yapının ortak merdivenlerinin yangın ve diğer acil hâllerde kullanılabilecek özellikte olanları, kaçış merdiveni olarak kabul edilir.
 2. Kaçış merdivenleri, yangın ve diğer acil hâl tahliyelerinde kullanılan kaçış yolları bütününün bir parçasıdır ve diğer kaçış yolları öğelerinden bağımsız tasarlanamazlar.
@@ -52,7 +38,7 @@ Tam metin: 1. Yapının ortak merdivenlerinin yangın ve diğer acil hâllerde k
 4. Kaçış merdivenlerinin kullanıma uygun şekilde boş bulundurulmasından, bina veya işyeri sahibi ve yöneticileri sorumludur.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Yangın anında asansör yerine işaretlenmiş kaçış merdivenini kullanın.
+Eylem adımı (taslak): İnsanları asansöre değil, kaçış merdivenlerine yönlendirin.
 
 ## Madde 39 — Acil çıkış zorunluluğu
 Özet: Binalarda yeterli sayıda korunmuş ve birbirinden uygun uzaklıkta alternatif çıkış bulunmalıdır.
@@ -62,7 +48,7 @@ Tam metin: 1. Bütün yapılarda, aksi belirtilmedikçe, en az 2 çıkış tesis
 4. Çıkış mesafelerinin kapıdan alındığı bina kullanım sınıflarında, bir koridor içindeki 2 kaçış merdiveni arasındaki mesafe, yağmurlama sistemi olmayan yapılarda koridor uzunluğunun yarısından ve yağmurlama sistemi olan yapılarda ise koridor uzunluğunun 1/3’ünden az olamaz.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Kaçış merdivenlerini ve acil çıkışları eşya ile kapatmayın.
+Eylem adımı (taslak): Kalabalığı tek kapıya yığmadan en yakın iki farklı çıkışa bölerek yönlendirin.
 
 ## Madde 40 — Kaçış merdiveni yuvalarının yeri ve düzenlenmesi
 Özet: Kaçış yolları ve merdivenleri birbirinin alternatifi olacak şekilde yerleştirilmeli ve tahliye boyunca süreklilik sağlamalıdır.
@@ -70,48 +56,9 @@ Tam metin: 1. Yangın hangi noktada çıkarsa çıksın, o kotta bütün insanla
 2. Merdiven yuvalarının yeri, binadaki insanların güvenlikle bina dışına kaçışlarını kolaylaştıracak şekilde seçilir. Kaçış merdivenlerinin, başladıkları kottan çıkış kotuna kadar süreklilik göstermesi gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Kaçış merdiveninin girişi dumanlıysa insanları binanın öbür ucundaki kaçış merdivenine yönlendirin.
+Eylem adımı (taslak): Kaçış merdiveninin girişi dumanlıysa insanları binanın öbür ucundaki kaçış merdivenine yönlendirin.
 
-<<<<<<< HEAD
-Madde 41 — Kaçış merdiveni özellikleri
-
-Özet: Kaçış merdivenleri yangın sırasında insanların güvenli şekilde dışarı çıkmasını sağlayacak dayanım, genişlik ve kullanım şartlarını karşılamalıdır.
-Tam metin: 1. Kaçış merdivenlerinin kapasite ve sayı bakımından en az yarısının doğrudan bina dışına açılması gerekir.
-2. Kaçış merdiveninin, zemin düzeyindeki dışarı çıkışın görülebildiği ve engellenmediği hol, koridor, fuaye, lobi gibi bir dolaşım alanına inmesi hâlinde, kaçış merdiveninin indiği nokta ile dış açık alan arasındaki uzaklık, kaçış merdiveni bir kattan daha fazla kata hizmet veriyor ise 10 m’yi aşamaz. Yağmurlama sistemi olan yapılarda bu uzaklık en fazla 15 m olabilir. Dışa açık alanın, kaçış merdiveninin indiği noktadan açıkça görülmesi ve güvenlikli bir şekilde doğrudan erişilebilir olması gerekir. İç kaçış merdivenlerinden boşalan kullanıcı yükünü karşılayacak yeterli genişlikte dışa açık kapı bulunması şarttır.
-3. Kaçış merdivenlerinde her döşeme düzeyinde 17 basamaktan çok olmayan ve 4 basamaktan az olmayan aralıkla sahanlıklar düzenlenir. Bina yüksekliği 15,50 m’den veya bir kattaki kullanıcı sayısı 100 kişiden fazla olan binalarda dengelenmiş kaçış merdivenlerine izin verilmez.
-4. Sahanlığın en az genişliği ve uzunluğu, merdivenin genişliğinden az olamaz. Basamakların kaymayı önleyen malzemeden olması şarttır.
-5. Kaçış merdiveni sahanlığına açılan kapılar hiçbir zaman kaçış yolunun 1/3’ nden fazlasını daraltacak şekilde konumlandırılamaz.
-6. Merdivenlerde baş kurtarma yüksekliğinin, basamak üzerinden en az 210 cm ve sahanlıklar arası kot farkının en çok 300 cm olması gerekir.
-7. Herhangi bir kaçış merdiveninde basamak yüksekliği 175 mm’den çok ve basamak genişliği 250 mm’den az olamaz.
-8. Kaçış için kullanılmasına izin verilen merdivenlerde, basamağın kova hattındaki en dar basamak genişliği, konutlarda 100 mm’den ve diğer yapılarda 125 mm’ den az olamaz. Her kaçış merdiveninin her iki yanında duvar, korkuluk veya küpeşte bulunması gerekir.
-9. Kaçış merdiveni yuvasına ve yangın güvenlik holüne elektrik ve mekanik tesisat şaftı kapakları açılamaz, kombi kazanı, iklimlendirme dış ünitesi, sayaç ve benzeri cihaz konulamaz.
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Kaçış merdivenlerindeki basamakları ve sahanlıkları eşya ile kapatmayın.
-
-Madde 42 — Dış kaçış merdivenleri
-
-Özet: Açık dış kaçış merdivenleri belirli şartları karşılamaları hâlinde iç kaçış merdiveni yerine kullanılabilir.
-Tam metin: 1. Dışarıda yapılan açık kaçış merdiveni, ilgili gereklere uyulması şartıyla iç kaçış merdivenleri yerine kullanılabilir. Dış kaçış merdiveninin korunumlu yuva içinde bulunması şart değildir.
-2. Açık dış kaçış merdiveninin herhangi bir bölümüne, yanlardan yatay ve alttan düşey uzaklık olarak 3 m içerisinde merdivenin özelliklerinden daha az korunumlu kapı ve pencere gibi duvar boşluğu bulunamaz.
-3. Bina yüksekliği 21,50 m’den fazla olan binalarda, bina dışında açık merdivenlere izin verilmez.
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Dış kaçış merdiveninin girişini ve basamaklarını engelsiz tutun.
-
-Madde 45 — Kaçış merdiveni havalandırması
-
-Özet: Korunmuş kaçış merdivenleri dumanın tahliyeyi engellememesi için havalandırılmalı veya basınçlandırılmalıdır.
-Tam metin: 1. Bütün korunmuş kaçış merdivenlerinin, doğal yolla veya Altıncı Kısımdaki gereklere uygun olarak mekanik yolla havalandırılması veya basınçlandırılması gerekir. Kaçış merdiveni ve kullanım alanları, aydınlatma ve havalandırma amacı ile aynı aydınlığı veya baca boşluğunu paylaşamaz.
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Kaçış merdiveninin havalandırma ve basınçlandırma sisteminde fark ettiğiniz arızayı bakım sorumlusuna bildirin.
-
-Madde 47 — Kaçış yolu kapıları
-
-=======
 ## Madde 47 — Kaçış yolu kapıları
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 Özet: Kaçış kapıları kolay açılabilir, engelsiz ve kullanıcıların tahliye yönüne uygun şekilde düzenlenmelidir.
 Tam metin: 1. Kaçış yolu kapılarının en az temiz genişliği 80 cm’den ve yüksekliği 200 cm’den az olamaz. Kaçış yolu kapılarında eşik olmaması gerekir. Dönel kapılar ile turnikeler, çıkış kapısı olarak kullanılamaz.
 2. Kaçış yolu kapıları kanatlarının, kullanıcıların hareketini engellememesi gerekir. Kullanıcı yükü 50 kişiyi aşan mekânlardaki çıkış kapılarının kaçış yönüne doğru açılması şarttır. Kaçış yolu kapılarının el ile açılması ve kilitli tutulmaması gerekir.
@@ -121,7 +68,7 @@ Tam metin: 1. Kaçış yolu kapılarının en az temiz genişliği 80 cm’den v
 6. Kapıların en çok 110 N kuvvetle açılabilecek şekilde tasarlanması gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı:	Kaçış yolu kapılarını kilitlemeyin ve açılmalarını engelleyen eşyaları kaldırın
+Eylem adımı (taslak): Kaçış kapılarını kaçış yönüne doğru sonuna kadar açık tutun.
 
 ## Madde 57 — Mutfaklar ve çay ocakları
 Özet: Büyük veya riskli mutfaklarda otomatik söndürme ile gaz algılama, kesme ve uyarı sistemleri kurulmalıdır.
@@ -132,7 +79,7 @@ Tam metin: 1. Konutlar hariç olmak üzere, alışveriş merkezleri, yüksek bin
 5. Mutfaklarda doğalgaz kullanılması hâlinde, 112'nci maddede belirtilen esaslara uyulması şarttır.
 İlgili senaryo: S2, S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: mutfakta varsa ocakların gazını ana vanadan kapatın.
+Eylem adımı (taslak): Mutfakta yangın varsa ocakların gazını ana vanadan kapatın.
 
 ## Madde 62 — Asansörlerin özellikleri
 Özet: Yangın uyarısı alan asansörler acil çıkış katına dönüp kapıları açık bekler, çağrı kabul etmez; asansör holünde "YANGIN SIRASINDA KULLANILMAZ" levhası bulunur.
@@ -149,6 +96,7 @@ c. Birinci ve ikinci derece deprem bölgelerinde bulunan yüksek binalarda, depr
 8. Asansör kabini dışında asansör holünde, kolayca okunabilecek büyüklükte “YANGIN SIRASINDA KULLANILMAZ” levhasının olması zorunludur.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
+Eylem adımı (taslak): Kimsenin asansöre binmesine izin vermeyin, herkesi merdivene yönlendirin.
 
 ## Madde 63 — Acil durum asansörü
 Özet: Acil durum asansörü itfaiye ve müdahale ekiplerinin taşınması ve engellilerin tahliyesi içindir; yangında kontrolü acil durum ekiplerine geçer.
@@ -160,13 +108,14 @@ Tam metin: 1. Acil durum asansörü; bir yapı içinde yangına müdahale ekiple
 6. Acil durum asansörünün makina dairesi ayrı olur ve asansör kuyusu basınçlandırılır.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
+Eylem adımı (taslak): Acil durum asansörünü yalnızca itfaiye ve acil durum ekiplerinin kullanmasına izin verin.
 
 ## Madde 70 — Acil durum aydınlatması ve yönlendirmesi
 Özet: Kaçış sırasında normal aydınlatma kesilse bile insanların yolu görebilmesi için acil aydınlatma otomatik olarak devreye girmelidir.
 Tam metin: 1. Kaçış yollarında, kullanıcıların kaçışı için gerekli aydınlatmanın sağlanmış olması şarttır. Acil durum aydınlatması ve yönlendirmesi için kullanılan aydınlatma ünitelerinin normal aydınlatma mevcutken aydınlatma yapmayan tipte seçilmesi hâlinde, normal kaçış yolu aydınlatması kesildiğinde otomatik olarak devreye girecek şekilde tesis edilmesi gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Elektrik kesildiğinde acil durum lambalarının yanıp yanmadığını kontrol edin.
+Eylem adımı (taslak): Elektrik kesildiğinde acil durum lambalarının yanıp yanmadığını kontrol edin.
 
 ## Madde 71 — Kaçış yollarının aydınlatılması
 Özet: Tüm kaçış yolları ve merdivenler, insanların gerektiğinde sürekli olarak kullanabileceği şekilde aydınlatılmalıdır.
@@ -174,7 +123,7 @@ Tam metin: 1. Bütün kaçış yollarının ve kaçış merdivenlerinin aydınla
 2. Kaçış yollarında aydınlatmanın, bina veya yapıda kaçış yollarının kullanılmasının gerekli olacağı bütün zamanlarda sürekli olarak yapılması şarttır. Aydınlatma bina veya yapının genel aydınlatma sistemine bağlı aydınlatma tesisatı ile sağlanır ve doğal aydınlatma yeterli kabul edilmez.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: İletişim yolunda karanlık kalan bir yer varsa el feneriyle insanlara yol gösterin.
+Eylem adımı (taslak): Kaçış yolunda karanlık kalan bir yer varsa el feneriyle insanlara yol gösterin.
 
 ## Madde 72 — Acil durum aydınlatması sistemi
 Özet: Normal elektrik beslemesi kesildiğinde acil aydınlatma sistemi kendi kendine devreye girerek güvenli tahliyeyi desteklemelidir.
@@ -198,7 +147,7 @@ ile sağlanır.
 8. Birinci ve ikinci derece deprem bölgelerinde, kaçış koridorları ve merdivenlerindeki acil aydınlatmanın, kendi başlarına çalışabilen bataryalı acil aydınlatma armatürleri ile sağlanması gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Tahliye acil durum lambaları sönmeden ilk altmış dakika içinde bitirelim.
+Eylem adımı (taslak): Tahliyeyi acil durum lambaları sönmeden, ilk 60 dakika içinde bitirin.
 
 ## Madde 73 — Acil durum yönlendirmesi
 Özet: Birden fazla çıkışı olan binalarda acil durumda insanların çıkış yönünü kolayca anlayabilmesi için görünür yönlendirme işaretleri bulunmalıdır.
@@ -211,7 +160,7 @@ Tam metin: 1. Birden fazla çıkışı olan bütün binalarda, kullanıcıların
 7. Yönlendirme işaretlerinin hem normal aydınlatma ve hem de acil durum aydınlatma hâllerinde kaçış yolu üzerinde bütün erişim noktalarından görülebilir olması gerekir. Dışarıdan aydınlatılan yönlendirme işaretleri aydınlatmasının, görülebilen bütün doğrultularda en az 2 cd/m² olması ve en az 0,5 değerinde bir kontrast oranına sahip bulunması şarttır.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: İnsanlara acil çıkış yazan işaretleri takip etmelerini söyleyin.
+Eylem adımı (taslak): İnsanlara ACİL ÇIKIŞ yazan yeşil işaretleri takip etmelerini söyleyin.
 
 ## Madde 74 — Yangın uyarı sistemi tasarım ilkeleri
 Özet: Yangın uyarı sistemi algılama, alarm, kontrol ve haberleşme işlevlerini birlikte yerine getirecek şekilde kurulmalıdır.
@@ -220,7 +169,7 @@ Tam metin: 1. Yangın uyarı sistemi; yangın algılama, alarm verme, kontrol ve
 3. Yangın uyarı sisteminin herhangi bir sebeple devre dışı kalması hâlinde, tekrar çalışır duruma getirilinceye kadar korumasız kalan bölgelerde ilave güvenlik personeli ile denetim yapılır ve gerekli tedbir alınır.
 İlgili senaryo: S1, S2
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Yangın alarm paneli arıza gösterirse o bölgeye hemen bir görevli gönderip gözle kontrol ettirin.
+Eylem adımı (taslak): Yangın alarm paneli arıza gösterirse o bölgeye hemen bir görevli gönderip gözle kontrol ettirin.
 
 ## Madde 75 — Algılama ve uyarı sistemi
 Özet: Yangın algılama ve uyarı sistemi manuel, otomatik veya söndürme sistemlerinden gelen uyarılarla çalışmalı ve gerekli yapılarda otomatik algılama bulunmalıdır.
@@ -237,15 +186,9 @@ c. Konutlar dâhil bütün yüksek binalarda.
 8. Binada veya yapıda otomatik veya el ile çalışan diğer gazlı, kuru kimyevi tozlu veya benzeri sabit söndürme sistemi bulunuyor ise, bunların devreye girdiğinin yangın alarm sistemi tarafından otomatik olarak algılanması gerekir. Bunu sağlamak üzere, söndürme sistemlerinden, söndürme sisteminin devreye girdiğini bildiren kontak çıkışları yangın alarm sistemine giriş olarak bağlanır.
 İlgili senaryo: S1, S2, S3
 İlgili bina tipleri: otel, AVM, kampüs
+Eylem adımı (taslak): Duman veya alev gördüğünüzde en yakın kırmızı yangın ihbar butonuna basın.
 
-<<<<<<< HEAD
-Eylem	adımı: Duman veya alev gördüğünüzde en yakın kırmızı yangın ihbar butonuna basın.
-
-Madde 76 — Alarm verme
-
-=======
 ## Madde 76 — Alarm verme
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 Özet: Yangın alarmı devreye girdiğinde bina sakinleri, acil durum ekipleri ve gerektiğinde itfaiye farklı iletişim yollarıyla uyarılmalıdır.
 Tam metin: 1. Bir yangın algılama ve uyarı sisteminin devreye girmesi hâlinde, sesli ve ışıklı olarak veya data iletişimi ile alarm verme;
 a. Ana kontrol panelinde ve diğer izleme noktalarındaki tali kontrol panellerinde veya tekrarlayıcı panellerde sesli, ışıklı veya alfa nümerik göstergeleri,
@@ -254,7 +197,7 @@ c. Binada bulunan yangın ve acil durum mücadele ekiplerinin uyarılması ve it
 ile yapılır.
 İlgili senaryo: S2, S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Doğrulanca 112 arayıp bina adını katı ve bölgeyi söyleyin.
+Eylem adımı (taslak): Alarm doğrulanınca 112'yi arayıp bina adını, katı ve bölgeyi söyleyin.
 
 ## Madde 77 — Yangın kontrol panelleri
 Özet: Yangın kontrol ve tekrarlayıcı paneller, sürekli görevli personelin kolayca ulaşabileceği yerlerde bulunmalıdır.
@@ -263,34 +206,28 @@ a. Kontrol ve tekrarlayıcı paneller, binanın, tercihen zemin katında veya ko
 b. Yangın kontrol panelinin tesis edildiği yerde personelin bulunamadığı zaman aralıkları var ise bu sürelerde sürekli personel bulunan ikinci bir mahalde veya daha fazla mahalde tekrarlayıcı paneller tesis edilir.
 İlgili senaryo: S2, S3
 İlgili bina tipleri: otel, AVM, kampüs
+Eylem adımı (taslak): Alarm gelince yangın panelinde yanan bölgenin adını okuyup not alın.
 
-<<<<<<< HEAD
-Eylem	adımı: Alarm gelince yangın panelinde yanan bölgenin adını okuyup not al.
-
-Madde 78 — Yağmurlama sistemi alarm istasyonları
-
-=======
 ## Madde 78 — Yağmurlama sistemi alarm istasyonları
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 Özet: Yağmurlama sistemi ve otomatik algılama sistemi bulunan binalarda yağmurlama alarmı yangın alarm sistemine aktarılmalıdır.
 Tam metin: 1. Bir binada yağmurlama sistemi ve otomatik algılama sistemi kurulması hâlinde, yağmurlama sistemi alarm istasyonları ve akış anahtarları yangın alarm sistemine bağlanır. Yağmurlama sisteminden gelen alarm uyarıları ayrı bir bölgesel izleme panelinde veya yangın kontrol panelinde ayrı bölgesel alarm göstergeleri oluşturularak izlenir. Hat kesme vanalarının izleme anahtarlarının ve yağmurlama sistemine ilişkin diğer arıza kontaklarının da aynı şekilde yangın alarm sistemi tarafından sürekli olarak denetlenmesi gerekir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Panelde yağmurlama alarmı görürseniz o bölgede gerçek yangın olduğunu varsayıp ekibi oraya gönderin.
+Eylem adımı (taslak): Panelde yağmurlama (sprinkler) alarmı görürseniz o bölgede gerçek yangın olduğunu varsayıp ekibi oraya gönderin.
 
 ## Madde 79 — Gazlı söndürme sistemi alarm ve arıza çıkışları
 Özet: Gazlı söndürme sistemlerinin alarm ve arıza bilgileri yangın alarm sisteminden izlenmeli ve sistem aktif durumda tutulmalıdır.
 Tam metin: 1. Bir binada gazlı söndürme sistemi kurulması hâlinde, binada algılama ve uyarı sistemi var ise, söndürme sisteminin alarm ve arıza çıkışları, yangın alarm sistemine bağlanarak ayrı bölgesel göstergelerle izlenir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Gazı söndürme alarmı çalan odada genelkesi hemen dışarı çıkarıp kapıyı kapatın.
+Eylem adımı (taslak): Gazlı söndürme alarmı çalan odadaki herkesi hemen dışarı çıkarıp kapıyı kapatın.
 
 ## Madde 80 — Duman kontrol ve basınçlandırma sistemleri kontrol ve izlemeleri
 Özet: Duman kontrolü ve basınçlandırma sistemlerinde meydana gelen arızalar yangın güvenliği açısından sürekli izlenmelidir.
 Tam metin: 1. Bir binada duman kontrol ve basınçlandırma sistemleri kurulması hâlinde, bu sistemler ile ilgili arıza ve konum değiştirme sinyalleri ayrı bir bölgesel izleme panelinde veya yangın kontrol panelinde ayrı bölgesel durum ve arıza göstergeleri oluşturularak izlenir ve kontrol edilir. Duman kontrol ve basınçlandırma sistemlerinin el ile kontrolleri ayrı bir kontrol panelinden yapılabileceği gibi, yukarıda belirtilen izleme panelleri ile birleştirilerek yangın alarm sistemi bünyesinde de gerçekleştirilebilir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem	adımı: Panelde duman tahliye fanı arıza veriyorsa fanı panelden elle açın.
+Eylem adımı (taslak): Panelde duman tahliye fanı arıza veriyorsa fanı panelden elle açın.
 
 ## Madde 81 — Sesli ve ışıklı uyarı cihazları
 Özet: Yangın uyarıları sesli ve ışıklı yapılır; eğitimli personele gecikmesiz ulaşılması şartıyla alarmın gerçekliğini araştırmaya imkân veren ön uyarıya izin verilir ve tamamı boşaltılamayan binalarda kademeli tahliye yapılır.
@@ -364,31 +301,7 @@ Tam metin: 1. Binalarda duman kontrol sistemi olarak yapılan basınçlandırma,
 İlgili bina tipleri: otel, AVM, kampüs
 Eylem adımı (taslak): Yangın anında duman tahliye fanlarının çalıştığını panelden kontrol edin.
 
-<<<<<<< HEAD
-Madde 87 — İklimlendirme ve havalandırma tesisatının duman kontrolünde kullanımı
-
-Özet: Havalandırma sistemi duman kontrolü için kullanılabilir ancak yangın güvenliği için gerekli özel şartları sağlamalıdır.
-Tam metin: 1. Yangın hâlinde, mevcut iklimlendirme ve havalandırma tesisatı duman kontrol sistemi olarak da kullanılabilir. Bu durumda, bu Yönetmelikte mekanik duman kontrol sistemi için öngörülen bütün şartlar, iklimlendirme ve havalandırma sistemi için de aranır.
-2. Mekanik duman kontrol sistemleri için tesis edilen havalandırma ve tahliye kanallarının çelik, alüminyum ve benzeri malzemeden yapılmış olması gerekir.
-3. Bütün mekanik havalandırma ve duman tahliye sisteminde kullanılacak kanalların yeterli sayıda askı elemanları ile bağlanması şarttır.
-4. Kanal kaplama malzemesinin, en azından zor alevlenici malzemeden olması gerekir.
-5. Havalandırma ve duman tahliye kanallarının, kaçış merdivenlerinden ve yangın güvenlik hollerinden geçmemesi asıldır. Ancak, çeşitli sebeplerden dolayı, kanalın bu bölümlerden geçmesi hâlinde, geçtiği bölümün yapısal olarak yangına dayanım süresi kadar yangına dayanacak bir malzeme ile kaplanması şarttır.
-6. Aynı hava santrali ile birden fazla yangın kompartımanının havalandırılması veya iklimlendirilmesi yapılıyor ise, yangın kompartımanları arası geçişlerde, üfleme ve emiş kanallarında yangın damperi kullanılması gerekir.
-7. Asma tavan arası ve yükseltilmiş döşeme altı gibi mahallerin plenum olarak kullanılması hâlinde; bu bölümler içerisinden sadece mineral, alüminyum veya bakır zırhlı kablolar, rijit metal borular ve sıvı sızdırmaz esnek metal borular geçirilebilir. Bilgisayar, televizyon, telefon ve iç haberleşme sistemleri kablolarının ve yangın korunum sistemi boruları ile alevlenmeyen sıvılar taşıyan yanmaz malzemeden boruların kullanılmasına izin verilir.
-8. Havalandırma ve duman tahliye kanallarının yangın kompartımanı duvarlarını delmemesi gerekir. Kanalın yangına 120 dakika dayanıklı bir yangın kompartımanı duvarını veya katını geçmesi hâlinde, kanal üzerine yangın kompartımanı duvarını veya katını geçtiği yerde 120 dakika ve üzerindeki yangın zonu geçişlerinde yangın damperi konulması veya şönt baca veya özel kelepçe gibi yangın geçişini engelleyen önlemler alınması gerekir. Havalandırma kanalı, korunmuş bir şaft içinden geçiyor ise şafta giriş ve çıkışta yangın damperi kullanılması şarttır.
-9. Basınçlandırma sisteminin kanallarında yangın damperi kullanılmaz.
-10. Duman kontrol sistemi uzaktan el ile kumanda edilerek veya yangın algılama ve uyarı sistemi tarafından otomatik olarak devreye sokulabilir.
-11. Yangının yayılmasında rol oynayan tesisat bacasının ve kanallarının, yangın kompartımanları hizasında olması ve kompartımanın yangın dayanımını azaltmayacak şekilde yalıtılması gerekir. Havalandırma kanal ve bacalarının yangın kompartımanlarını aşmalarına özel detaylar dışında izin verilmez. Hava kanallarının, yanmaz malzemeden yapılması veya yanmaz malzeme ile kaplanması şarttır.
-12. Yapı yüksekliği 51,50 m’nin üzerinde olan binaların hol ve koridor gibi ortak alanlarında duman kontrol sistemi yapılması mecburîdir.
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem adımı (taslak): Yangın sırasında havalandırma sistemine kendiniz müdahale etmeyin; belirlenmiş yangın talimatını uygulayın.
-
-Madde 88 — Kazan dairesi, jeneratör odası, mutfak, otoparklar ve tahıl depolarında duman kontrolü
-
-=======
 ## Madde 88 — Kazan dairesi, jeneratör odası, mutfak, otoparklar ve tahıl depolarında duman kontrolü
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 Özet: Belirli yüksek riskli alanlarda duman tahliye sistemleri bağımsız ve güvenli çalışacak şekilde kurulmalıdır.
 Tam metin: 1. Dizel pompa ve acil durum jeneratörünü çalıştırabilmek için mekanik havalandırmanın gerekli olduğu yerlerde, bu bölümlerin duman tahliye sistemlerinin; diğer bölümlere hizmet veren sistemlerden bağımsız olarak dizayn edilmesi, havanın doğrudan dışardan ve herhangi bir egzoz çıkış noktasından en az 5 m uzaktan alınması ve mahallin egzoz çıkışının da doğrudan dışarıya ve herhangi bir hava giriş noktasından en az 5 m uzağa atılması gerekir.
 2. Otel, restoran, kafeterya ve benzeri yerlerin mutfaklarındaki pişirme alanlarının mekanik egzoz sisteminin; binanın diğer bölümlerine hizmet veren sistemlerden bağımsız olması, egzoz kanallarının, korunmamış yanabilir malzemelerden en az 50 cm açıktan geçmesi, egzozun doğrudan dışarıya atılması ve herhangi bir hava giriş açıklığından en az 5 m uzakta olması gerekir. Mutfak dışından geçen egzoz kanalının; geçtiği bölümün veya mutfak bölümünün yapısal olarak yangına dayanma süresi kadar bir malzeme ile kaplanması, şayet kanal bir tuğla şaftı içerisinden geçiyor ise, şaftın diğer bölümlerinden ve diğer kanallardan veya servis elemanlarından ayrılması şarttır. Mutfak egzoz kanallarına yangın damperi konulamaz.
@@ -415,7 +328,7 @@ c. C sınıfı yangın çıkması muhtemel yerlerde, öncelikle kuru kimyevi toz
 8. Binalara konulacak yangın söndürme cihazlarının cinsi, miktarı ve yerlerinin belirlenmesi konusunda, gerekirse mahalli itfaiye teşkilatının görüşü alınabilir.
 İlgili senaryo: S3
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem adımı (taslak):Yangın sırasında kaçış merdivenlerinin kapılarını kapalı tutun.
+Eylem adımı (taslak): Yangın küçükse en yakın söndürme tüpünün pimini çekip alevin dibine sıkın.
 
 ## Madde 124 — Yangın güvenliği sorumluluğu
 Özet: Binalarda yangın güvenliğinin sağlanmasından bina yönetimindeki yetkili kişiler sorumludur.
@@ -479,21 +392,9 @@ Eylem adımı (taslak): İtfaiye gelince olay yeri bilgilerini itfaiye amirine v
 ## Madde 129 — Genel eğitim
 Özet: Acil durum ekipleri ve diğer görevliler yangınla mücadele konusunda eğitilmeli ve yılda en az bir kez söndürme-tahliye tatbikatı yapılmalıdır.
 Tam metin: 1. Acil durum ekiplerinin personeli; bina sahibi, yöneticisi veya amirinin sorumluluğunda yangından korunma, yangının söndürülmesi, can ve mal kurtarma, ilk yardım faaliyetleri, itfaiye ile işbirliği ve organizasyon sağlanması konularında, mahalli itfaiye ve sivil savunma teşkilatlarından yararlanılarak eğitilir ve yapılan tatbikatlar ile bilgi ve becerileri artırılır. Ekip personeli ile binadaki diğer görevliler, yangın söndürme alet ve malzemelerinin nasıl kullanılacağı ve en kısa zamanda itfaiyeye nasıl ulaşılacağı konularında tatbikî eğitimden geçirilir. Binada senede en az 1 kez söndürme ve tahliye tatbikatı yapılır.
-<<<<<<< HEAD
-İlgili senaryo: S3
-İlgili bina tipleri: otel, AVM, kampüs
-Eylem adımı (taslak): Bu yıl söndürme ve tahliye tatbikatı yapılmadıysa yangın güvenliği sorumlusunu arayıp tatbikat tarihi isteyin.
-
-Madde 130 — Özel eğitim
-
-Özet: İtfaiye ve yangın güvenliğiyle ilgili özel görevleri olan personelin gerekli teknik ve temel eğitimleri alması sağlanmalıdır.
-Tam metin: 1. İtfaiye eğitim birimi bulunmayan belediye itfaiye teşkilatlarının yönetici personelinin; sivil savunma konularını içeren temel eğitimleri (…) Afet ve Acil Durum Yönetimi Başkanlığınca, ilk yardım temel eğitimleri ise Sağlık Bakanlığınca verilir. Bu personelin her türlü eğitim giderleri, kuruluşlarınca kendi bütçelerinden karşılanır. Belediye itfaiye teşkilatının yönetici personelinin teknik eğitimleri ile diğer personelin temel ve teknik eğitimleri, kendi teşkilâtlarınca yaptırılır.
-2. Bünyesinde itfaiye birimi bulunduran mahalli idareler ile kamu kurum ve kuruluşları ve özel kuruluşlar ile diğer yapı, bina ve işletmelerde itfaiye birimi personelinin eğitimi, kendi imkânları ile kendi kuruluşlarınca, gerekirse bünyesinde itfaiye eğitim birimi bulunan mahalli itfaiye ve il afet ve acil durum müdürlüklerinden yararlanılarak yapılır. Bu kuruluşlar, ilgili mevzuatına uygun şekilde yangın eğitimi veren özel okul, kurs ve dershanelerden eğitim hizmeti alabilirler.
-=======
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
 İlgili senaryo: S1
 İlgili bina tipleri: otel, AVM, kampüs
-Eylem adımı (taslak): Yangın güvenliği göreviniz için belirlenen eğitimleri tamamlayın.
+Eylem adımı (taslak): Bu yıl söndürme ve tahliye tatbikatı yapılmadıysa yangın güvenliği sorumlusunu arayıp tatbikat tarihi isteyin.
 
 ## Madde 136 — İç düzenlemelerin hazırlanması
 Özet: Binaların özelliklerine göre yangın önleme ve söndürme konusunda kurum içi düzenlemeler hazırlanmalıdır.
@@ -508,8 +409,4 @@ Tam metin: 1. Yangın önleme ve söndürme konusundaki iç düzenlemelerde; bu 
 2. Yangın önleme ve söndürme konusundaki iç düzenlemeler yapı, bina, tesis ve işletmenin sahibi, yöneticisi veya amiri tarafından yürütülür.
 İlgili senaryo: S1, S3
 İlgili bina tipleri: otel, AVM, kampüs
-<<<<<<< HEAD
 Eylem adımı (taslak): Kat planlarını ve yangın krokilerini güvenlik masasında hazır tutun.
-=======
-
->>>>>>> 50758a4cb8a77f3edb5ee0b5cb7843219362c2ed
