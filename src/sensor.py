@@ -1,8 +1,12 @@
+from pathlib import Path
+
 import joblib
 import pandas as pd
 
-# Model dosyası Drive'dan (YanginProjesi/modeller) indirilip models/ klasörüne konmalı; GitHub'da yok
-MODEL = joblib.load("models/sensor_model.joblib")
+# Model dosyası Drive'dan (YanginProjesi/modeller) indirilip models/ klasörüne konmalı; GitHub'da yok.
+# Yol bu dosyanın yerine göre bulunur, böylece kod hangi klasörden çalıştırılırsa çalıştırılsın model bulunur.
+MODEL_YOLU = Path(__file__).resolve().parent.parent / "models" / "sensor_model.joblib"
+MODEL = joblib.load(MODEL_YOLU)
 
 # Eğitimdeki sütun sırası (X_egitim.columns) — sıra değişirse model yanlış tahmin yapar
 SUTUNLAR = ["Temperature[C]", "Humidity[%]", "TVOC[ppb]", "eCO2[ppm]",
@@ -14,7 +18,13 @@ ESIK = 0.8
 
 
 def sensor_tahmin(okuma: dict) -> float:
-    """Tek bir sensör okumasından yangın olasılığını (0-1 arası) döndürür."""
+    """Tek bir sensör okumasından yangın olasılığını (0-1 arası) döndürür.
+
+    okuma sözlüğünde SUTUNLAR listesindeki 12 sensörün hepsi bulunmalı.
+    """
+    eksik = [s for s in SUTUNLAR if s not in okuma]
+    if eksik:
+        raise ValueError(f"Sensör okumasında eksik sütunlar var: {eksik}")
     X = pd.DataFrame([okuma])[SUTUNLAR]
     return float(MODEL.predict_proba(X)[:, 1][0])
 
