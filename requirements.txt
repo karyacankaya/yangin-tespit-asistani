@@ -1,6 +1,10 @@
-  streamlit
-  pytest
-  sentence-transformers
+streamlit
+pytest
+sentence-transformers
 chromadb
 google-genai
 python-dotenv
+pandas
+joblib
+# Sensör modeli bu sürümle eğitildi; farklı sürüm modeli açamayabilir
+scikit-learn==1.9.1
