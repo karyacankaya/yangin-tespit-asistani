@@ -10,7 +10,7 @@ from google.genai import types
 
 load_dotenv()  # proje klasöründeki .env dosyasını okur
 anahtar = os.environ.get("GEMINI_API_KEY")
-model_adi = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
+model_adi = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 
 if not anahtar:
     raise SystemExit("Anahtar YOK ❌  .env dosyasında GEMINI_API_KEY=... satırı var mı?")

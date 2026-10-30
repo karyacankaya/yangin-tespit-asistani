@@ -25,7 +25,7 @@ KAC_MADDE = 5  # Gemini'ye gönderilecek madde sayısı
 ASISTAN_ULASILAMIYOR = "Asistana ulaşılamıyor, 112'yi arayın."  # FOG-05 uyarı metni
 
 load_dotenv(REPO / ".env")
-MODEL_ADI = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
+MODEL_ADI = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
 
 # Ağır şeyleri (bge-m3, Chroma, Gemini istemcisi) bir kez yükleyip saklıyoruz.
 # Böylece asistan_cevapla her çağrıldığında model baştan yüklenmez.

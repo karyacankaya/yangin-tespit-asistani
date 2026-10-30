@@ -12,3 +12,6 @@ matplotlib
 seaborn
 # Sensör modeli bu sürümle eğitildi; farklı sürüm modeli açamayabilir
 scikit-learn==1.9.1
+langgraph
+langchain
+langchain-google-genai
