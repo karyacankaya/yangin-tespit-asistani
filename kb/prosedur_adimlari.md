@@ -1,11 +1,13 @@
 # Yangın Müdahale Prosedür Adımları
 
 Bu dosya, yangın senaryolarına göre adım adım müdahale prosedürlerini içerir.
-Her senaryo (S1, S2, S3) için sıralı adımlar ve her adımın detaylı açıklaması bulunur.
+Adımlar sistemin alarm seviyesine göre gruplanmıştır: NORMAL (S1), ŞÜPHELİ (S2) ve DOĞRULANMIŞ (S3). Uygulama hangi listeyi göstereceğini senaryo adından değil, o anki alarm seviyesinden seçer. Makine-okur hâli: `kb/prosedur_adimlari.jsonl` (her satır bir adım, `seviye` alanıyla).
+
+Her adımın dayandığı madde numaraları `kb/maddeler.jsonl` içindeki maddelerdir.
 
 ---
 
-## Senaryo S1: Normal Durum (Alarm Yok)
+## NORMAL seviye — Senaryo S1: Normal Durum (Alarm Yok)
 
 **Durum:** Yangın alarmı yok, sistem normal çalışıyor.
 
@@ -46,7 +48,7 @@ Her senaryo (S1, S2, S3) için sıralı adımlar ve her adımın detaylı açık
 
 ---
 
-## Senaryo S2: Şüpheli Durum (Yanlış Alarm Olabilir)
+## ŞÜPHELİ seviye — Senaryo S2: Şüpheli Durum (Yanlış Alarm Olabilir)
 
 **Durum:** Sensör veya kamera bir şey tespit etti ama emin değiliz. Yangın olabilir, olmayabilir.
 
@@ -61,8 +63,8 @@ Her senaryo (S1, S2, S3) için sıralı adımlar ve her adımın detaylı açık
 - **İlgili Madde:** Madde 74
 
 ### Adım 3: Kamerayı Kontrol Et
-- **Eylem:** Şüpheli bölgenin kamerasına bakın. Duman veya alev görüyor musunuz?
-- **Açıklama:** Görüntü modeli (YOLO) size yardımcı olabilir ama insan kararı da önemli.
+- **Eylem:** Şüpheli bölgenin kamerasına bakın; duman veya alev görürseniz en yakın kırmızı yangın ihbar butonuna basın.
+- **Açıklama:** Görüntü modeli (YOLO) size yardımcı olabilir ama son karar insanındır.
 - **İlgili Madde:** Madde 75
 
 ### Adım 4: Mutfak Gazını Kontrol Et
@@ -87,13 +89,14 @@ Her senaryo (S1, S2, S3) için sıralı adımlar ve her adımın detaylı açık
 
 ---
 
-## Senaryo S3: Kesin Yangın (Gerçek Alarm)
+## DOĞRULANMIŞ seviye — Senaryo S3: Kesin Yangın (Gerçek Alarm)
 
 **Durum:** Yangın kesinlikle var. Alev veya yoğun duman görülüyor.
 
 ### Adım 1: 112'yi Hemen Ara
 - **Eylem:** 112'yi arayın, bina adını, adresini, yangının katını ve bölgesini net şekilde söyleyin.
 - **Açıklama:** İtfaiye ne kadar erken haber alırsa o kadar hızlı gelir. Konum bilgisi eksiksiz olmalı.
+- **Prototipte:** Gerçek arama yapılmaz; sistem olay günlüğüne "112 ARANDI (SİMÜLASYON)" yazar (FG-11, KK-11).
 - **İlgili Madde:** Madde 76
 
 ### Adım 2: Tahliye Anonsunu Başlat
@@ -126,7 +129,7 @@ Her senaryo (S1, S2, S3) için sıralı adımlar ve her adımın detaylı açık
 - **Açıklama:** Bu asansör itfaiye içindir. Siviller kullanmamalı.
 - **İlgili Madde:** Madde 63
 
-### Adım 8: Yangına Küçükse Müdahale Et
+### Adım 8: Yangın Küçükse Müdahale Et
 - **Eylem:** Yangın küçükse (başlangıç aşamasındaysa) en yakın söndürme tüpünün pimini çekip alevin dibine sıkın.
 - **Açıklama:** Büyük yangına müdahale etmeyin. Sadece başlangıç aşamasındaki küçük yangınlara müdahale edin.
 - **İlgili Madde:** Madde 99
