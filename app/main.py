@@ -13,6 +13,17 @@ sys.path.insert(0, str(KOK))
 
 from src.fusion import fuzyon
 
+# ---- Gerçek modeller: model dosyaları models/ klasöründeyse kullanılır ----
+# Dosyalar yoksa (ör. modelleri indirmemiş bir bilgisayarda) senaryo dosyasındaki
+# "kayitli_*" değerleri kullanılır. Bu değerler aynı modellerin aynı satır/kare için
+# önceden kaydedilmiş çıktısıdır (scenarios/senaryo_uret.py).
+try:
+    from src.sensor import MODEL_YOLU as SENSOR_MODEL_YOLU, sensor_tahmin
+    from src.vision import MODEL_YOLU as GORUNTU_MODEL_YOLU, vision_tahmin
+    GERCEK_MODEL = SENSOR_MODEL_YOLU.exists() and GORUNTU_MODEL_YOLU.exists()
+except ImportError:          # ör. ultralytics kurulu değilse
+    GERCEK_MODEL = False
+
 # ---- Ayarlar ----
 SENARYOLAR = {
     "S1 Normal": "s1_normal.json",
@@ -32,18 +43,32 @@ GOSTERILECEK_SENSORLER = {
 GERI_SAYIM_SN = 60
 
 
-# ---- Sahte model fonksiyonları (Büşra'nın modelleri gelene kadar) ----
-def sahte_sensor(adim: dict) -> float:
-    return adim.get("sahte_p_sensor", 0.1)
+# ---- Model çağrıları ----
+@st.cache_data(show_spinner=False)
+def _goruntu_sonucu(kare: str) -> dict:
+    # Aynı kare için modeli her saniye yeniden çalıştırmamak için sonuç saklanır
+    return vision_tahmin((KOK / "scenarios" / "kareler" / kare).read_bytes())
 
 
-def sahte_goruntu(adim: dict) -> dict:
-    return adim.get("sahte_goruntu", {"p_alev": 0.0, "p_duman": 0.0})
+def sensor_olasiligi(adim: dict) -> float:
+    if GERCEK_MODEL:
+        return sensor_tahmin(adim["sensor_satiri"])
+    return adim.get("kayitli_p_sensor", 0.0)
+
+
+def goruntu_olasiligi(adim: dict) -> dict:
+    if GERCEK_MODEL:
+        return _goruntu_sonucu(adim["kare"])
+    return adim.get("kayitli_goruntu", {"p_alev": 0.0, "p_duman": 0.0})
 
 
 # ---- Dosya ve görünüm yardımcıları ----
 def senaryo_yukle(dosya_adi: str) -> list:
-    with open(KOK / "scenarios" / dosya_adi, encoding="utf-8") as f:
+    yol = KOK / "scenarios" / dosya_adi
+    if not yol.exists():                       # FG-05: dosya yoksa hata mesajı
+        st.error(f"Senaryo dosyası bulunamadı: scenarios/{dosya_adi}")
+        st.stop()
+    with open(yol, encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -130,8 +155,8 @@ else:
     adimlar = senaryo_yukle(SENARYOLAR[ss.senaryo])
     adim = adimlar[ss.adim]
     sensor = adim["sensor_satiri"]
-    p_sensor = sahte_sensor(adim)
-    p_goruntu = sahte_goruntu(adim)
+    p_sensor = sensor_olasiligi(adim)
+    p_goruntu = goruntu_olasiligi(adim)
     ham = fuzyon(p_sensor, p_goruntu)
 
     yeni = seviye_belirle(ham)
@@ -157,11 +182,16 @@ else:
             fark = round(deger - onceki[anahtar], 2)
         sutun.metric(ad, f"{deger} {birim}", delta=fark, delta_color="inverse")
 
+    kaynak = "gerçek modeller" if GERCEK_MODEL else "kayıtlı model çıktısı"
     st.write(
-        f"**Model olasılıkları (sahte):** sensör = {p_sensor:.2f} · "
+        f"**Model olasılıkları ({kaynak}):** sensör = {p_sensor:.2f} · "
         f"alev = {p_goruntu['p_alev']:.2f} · duman = {p_goruntu['p_duman']:.2f}"
     )
-    st.caption(f"Kamera karesi: {adim['kare']}")
+    kare_yolu = KOK / "scenarios" / "kareler" / adim["kare"]
+    if kare_yolu.exists():
+        st.image(str(kare_yolu), caption=f"Kamera karesi: {adim['kare']}", width=420)
+    else:
+        st.caption(f"Kamera karesi: {adim['kare']} (dosya yok)")
     seviye_kutusu(ss.seviye)
 
     # ---- Operatör doğrulama paneli (yalnızca ŞÜPHELİ'de) ----
@@ -196,7 +226,7 @@ if ss.gunluk:
         mime="text/csv",
     )
 else:
-    st.caption("Henüz olay yok.")
+    st.caption("Kayıtlı olay yok.")   # FG-13 / UC-07 metni
 
 # ---- Bir sonraki saniyeye geç ----
 # Senaryo oynuyorsa ya da operatör yanıtı bekleniyorsa 1 sn bekleyip sayfayı yeniden çalıştır

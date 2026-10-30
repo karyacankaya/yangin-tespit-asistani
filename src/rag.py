@@ -22,6 +22,7 @@ REPO = Path(__file__).resolve().parent.parent
 CHROMA_YOLU = REPO / "kb" / "chroma_db"
 PROMPT_YOLU = REPO / "kb" / "sistem_promptu.txt"
 KAC_MADDE = 5  # Gemini'ye gönderilecek madde sayısı
+ASISTAN_ULASILAMIYOR = "Asistana ulaşılamıyor, 112'yi arayın."  # FOG-05 uyarı metni
 
 load_dotenv(REPO / ".env")
 MODEL_ADI = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
@@ -76,8 +77,15 @@ def asistan_cevapla(soru: str, bina_tipi: str, bolge: str) -> dict:
 
     Dönen sözlük: {"cevap": str, "kaynaklar": [madde numaraları]}
     """
-    h = _yukle()
-    maddeler = _maddeleri_bul(soru, bina_tipi)
+    bina_tipi = (bina_tipi or "").strip().lower()   # "Otel" ile "otel" aynı sayılsın
+    try:
+        h = _yukle()
+        maddeler = _maddeleri_bul(soru, bina_tipi)
+    except RuntimeError:
+        raise                                    # .env / Chroma kurulum hatası: geliştirici görmeli
+    except Exception:
+        # FOG-05: model indirilemiyor ya da bağlantı yoksa sistem çökmez, uyarı döner
+        return {"cevap": ASISTAN_ULASILAMIYOR, "kaynaklar": []}
 
     # Her maddenin başına kısa özetini (eylem adımı) koyuyoruz; uzun maddelerde
     # önemli cümle metnin ortasında kaybolmasın diye.
@@ -90,14 +98,18 @@ def asistan_cevapla(soru: str, bina_tipi: str, bolge: str) -> dict:
         f"YÖNETMELİK MADDELERİ:\n{madde_metni}\n\n"
         f"SORU: {soru}"
     )
-    yanit = h["gemini"].models.generate_content(
-        model=MODEL_ADI,
-        contents=mesaj,
-        config=types.GenerateContentConfig(
-            system_instruction=h["sistem_promptu"],
-            temperature=0,  # her seferinde aynı, tahminsiz cevap
-        ),
-    )
+    try:
+        yanit = h["gemini"].models.generate_content(
+            model=MODEL_ADI,
+            contents=mesaj,
+            config=types.GenerateContentConfig(
+                system_instruction=h["sistem_promptu"],
+                temperature=0,  # her seferinde aynı, tahminsiz cevap
+            ),
+        )
+    except Exception:
+        # FOG-05: internet kesintisi, kota aşımı vb. durumda uygulama çökmesin
+        return {"cevap": ASISTAN_ULASILAMIYOR, "kaynaklar": []}
     cevap = (yanit.text or "").strip()
 
     # Cevapta geçen madde numaralarını topla; sadece gerçekten gönderdiklerimizi kabul et
