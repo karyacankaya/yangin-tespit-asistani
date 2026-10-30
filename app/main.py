@@ -17,11 +17,17 @@ from src.fusion import fuzyon
 # Dosyalar yoksa (ör. modelleri indirmemiş bir bilgisayarda) senaryo dosyasındaki
 # "kayitli_*" değerleri kullanılır. Bu değerler aynı modellerin aynı satır/kare için
 # önceden kaydedilmiş çıktısıdır (scenarios/senaryo_uret.py).
+import importlib.util
+
 try:
     from src.sensor import MODEL_YOLU as SENSOR_MODEL_YOLU, sensor_tahmin
     from src.vision import MODEL_YOLU as GORUNTU_MODEL_YOLU, vision_tahmin
-    GERCEK_MODEL = SENSOR_MODEL_YOLU.exists() and GORUNTU_MODEL_YOLU.exists()
-except ImportError:          # ör. ultralytics kurulu değilse
+    GERCEK_MODEL = (
+        SENSOR_MODEL_YOLU.exists()
+        and GORUNTU_MODEL_YOLU.exists()
+        and importlib.util.find_spec("ultralytics") is not None   # görüntü modeli için gerekli
+    )
+except ImportError:          # ör. scikit-learn / joblib kurulu değilse
     GERCEK_MODEL = False
 
 # ---- Ayarlar ----
