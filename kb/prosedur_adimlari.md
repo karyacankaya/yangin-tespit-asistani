@@ -13,7 +13,7 @@ Her adımın dayandığı madde numaraları `kb/maddeler.jsonl` içindeki maddel
 
 ### Adım 1: Yangın Güvenlik Sorumlusunu Kontrol Et
 - **Eylem:** Vardiya başında binanın yangın güvenliği sorumlusunun adını ve telefonunu not al.
-- **Açıklama:** Yangın anında kiminle iletişime geçileceğini bilmek kritik. Sorumlu kişi değişmiş olabilir.
+- **Açıklama:** Yangın anında kiminle iletişime geçileceğini bilmek kritiktir. Sorumlu kişi değişmiş olabilir.
 - **İlgili Madde:** Madde 124, Madde 125
 
 ### Adım 2: Kaçış Yollarını Kontrol Et
