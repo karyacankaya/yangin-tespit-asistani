@@ -6,5 +6,9 @@ google-genai
 python-dotenv
 pandas
 joblib
+ultralytics
+pillow
+matplotlib
+seaborn
 # Sensör modeli bu sürümle eğitildi; farklı sürüm modeli açamayabilir
 scikit-learn==1.9.1
