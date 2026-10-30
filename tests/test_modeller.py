@@ -1,5 +1,6 @@
 # Gerçek model dosyalarıyla çalışan testler. Model dosyaları models/ klasöründe yoksa
 # (ör. GitHub'dan yeni indirilmiş bir bilgisayarda) bu testler atlanır (SKIPPED), hata vermez.
+import importlib.util
 import json
 from pathlib import Path
 
@@ -7,7 +8,7 @@ import pytest
 
 KOK = Path(__file__).resolve().parent.parent
 SENSOR_VAR = (KOK / "models" / "sensor_model.joblib").exists()
-GORUNTU_VAR = (KOK / "models" / "fire_smoke.pt").exists()
+GORUNTU_VAR = (KOK / "models" / "fire_smoke.pt").exists() and importlib.util.find_spec("ultralytics") is not None
 
 
 @pytest.mark.skipif(not SENSOR_VAR, reason="models/sensor_model.joblib yok")
@@ -28,7 +29,7 @@ def test_sensor_eksik_sutunda_hata_verir():
         sensor_tahmin({"Temperature[C]": 20.0})
 
 
-@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt yok")
+@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt ya da ultralytics yok")
 def test_vision_fusion_bicimini_dondurur():
     from src.fusion import fuzyon
     from src.vision import vision_tahmin
@@ -39,7 +40,7 @@ def test_vision_fusion_bicimini_dondurur():
     assert fuzyon(0.5, sonuc) in {"NORMAL", "SUPHELI", "DOGRULANMIS"}
 
 
-@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt yok")
+@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt ya da ultralytics yok")
 def test_vision_sinif_eslemesi_dogru():
     # Duman bulutunun kaplandığı görüntüde en güçlü tespit DUMAN olmalı (sınıf 0 = duman).
     # Bu test, sınıf adlarının ters çevrilmesi hatasının geri gelmesini engeller.
@@ -50,7 +51,7 @@ def test_vision_sinif_eslemesi_dogru():
     assert olaysiz["p_alev"] == 0.0 and olaysiz["p_duman"] == 0.0
 
 
-@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt yok")
+@pytest.mark.skipif(not GORUNTU_VAR, reason="models/fire_smoke.pt ya da ultralytics yok")
 def test_vision_png_seffaflikla_calisir():
     import io
 
