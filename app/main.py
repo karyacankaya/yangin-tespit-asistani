@@ -56,6 +56,9 @@ KAMERA_GORDU_ESIK = 0.25
 
 ASISTAN_ULASILAMIYOR = "Asistana ulaşılamıyor, 112'yi arayın."   # FOG-05
 
+# FG-14: günlük satırları sayfa yenilense de kaybolmasın diye bu dosyaya da eklenir
+GECMIS_YOLU = KOK / "logs" / "olay_gunlugu.csv"
+
 
 # ---- Model çağrıları ----
 @st.cache_data(show_spinner=False)
@@ -138,12 +141,17 @@ for anahtar, deger in VARSAYILANLAR.items():
 
 
 def gunluge_yaz(olay: str):
-    ss.gunluk.append({
+    satir = {
         "zaman": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "senaryo": ss.senaryo or "-",
         "seviye": ss.seviye,
         "olay": olay,
-    })
+    }
+    ss.gunluk.append(satir)
+    # Kalıcı kayıt: dosya yoksa başlık satırıyla oluştur, varsa sonuna ekle
+    GECMIS_YOLU.parent.mkdir(exist_ok=True)
+    yeni_dosya = not GECMIS_YOLU.exists()
+    pd.DataFrame([satir]).to_csv(GECMIS_YOLU, mode="a", header=yeni_dosya, index=False, encoding="utf-8")
 
 
 def seviye_degistir(yeni: str):
@@ -182,6 +190,17 @@ def seviye_belirle(ham: str) -> str:
 
 # ================= SAYFA =================
 st.title("Yangın Tespit ve Müdahale Asistanı")
+
+# ---- Geçmiş olaylar (FG-14, UC-08) ----
+gorunum = st.sidebar.radio("Görünüm", ["Canlı izleme", "Geçmiş olaylar"])
+if gorunum == "Geçmiş olaylar":
+    st.subheader("Geçmiş olaylar")
+    if GECMIS_YOLU.exists():
+        gecmis = pd.read_csv(GECMIS_YOLU, encoding="utf-8").sort_values("zaman")
+        st.dataframe(gecmis, hide_index=True)
+    else:
+        st.caption("Kayıtlı olay yok.")
+    st.stop()   # canlı izleme bölümünü çizme
 
 secim = st.sidebar.selectbox("Senaryo", list(SENARYOLAR.keys()))
 if st.sidebar.button("Senaryoyu Başlat", type="primary"):

@@ -9,3 +9,4 @@ kb/chroma_db/
 .anchor/
 .ipynb_checkpoints/
 runs/
+logs/
