@@ -55,7 +55,7 @@ Füzyon kuralları, senaryoların beklenen seviyeleri (S1 hiç alarm yok, S2 Ş�
 | Model | Veri | Sonuç |
 |---|---|---|
 | Sensör: Random Forest (50 ağaç, derinlik 4) | Smoke Detection (62.630 satır, 12 kanal) | Test: recall 0,989, ROC-AUC 0,991, eşik 0,8 |
-| Görüntü: YOLOv8n (50 epoch, 416 px) | D-Fire (sınıf 0 = duman, 1 = alev) | Val: mAP@0.5 0,740 (duman 0,816, alev 0,665); test sonuçları `notebooks/04_yolo_egitim.ipynb` |
+| Görüntü: YOLOv8n (50 epoch, 416 px) | D-Fire (sınıf 0 = duman, 1 = alev) | Test: mAP@0.5 0,731 (duman 0,804, alev 0,658); 200 yangınsız görüntüde yanlış alarm %2,5; 200 yangınlı görüntüde yakalama %93 |
 
 ---
 
