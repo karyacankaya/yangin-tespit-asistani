@@ -5,7 +5,7 @@ Kullanım (başka bir dosyadan):
     sonuc = vision_tahmin(open("kare.jpg", "rb").read())
     print(sonuc["p_alev"], sonuc["p_duman"])
 
-Deneme (repo klasöründeyken):  python3 src/vision.py scenarios/kareler/s3_kare_02.jpg
+Deneme (repo klasöründeyken):  python3 src/vision.py scenarios/kareler/WEB11799.jpg
 
 Model dosyası (fire_smoke.pt) GitHub'da yoktur; Drive'daki Modeller klasöründen indirilip
 models/ klasörüne konmalıdır.
@@ -81,6 +81,6 @@ def vision_tahmin(goruntu_bytes: bytes) -> dict:
 
 
 if __name__ == "__main__":
-    dosya = sys.argv[1] if len(sys.argv) > 1 else "scenarios/kareler/s3_kare_02.jpg"
+    dosya = sys.argv[1] if len(sys.argv) > 1 else "scenarios/kareler/WEB11799.jpg"
     with open(dosya, "rb") as f:
         print(dosya, "->", vision_tahmin(f.read()))
