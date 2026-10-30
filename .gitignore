@@ -6,3 +6,6 @@ __pycache__/
 .env
 .DS_Store
 kb/chroma_db/
+.anchor/
+.ipynb_checkpoints/
+runs/
