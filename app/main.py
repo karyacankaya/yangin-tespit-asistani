@@ -48,6 +48,14 @@ GOSTERILECEK_SENSORLER = {
 # FG-06: operatör bu kadar saniye içinde yanıt vermezse alarm güvenli tarafa (DOGRULANMIS) yükselir
 GERI_SAYIM_SN = 60
 
+# Asistana gönderilecek bina tipi (bilgi tabanındaki bina_tipleri ile aynı yazılmalı)
+BINA_TIPLERI = {"S1 Normal": "avm", "S2 Yanlış Alarm": "otel", "S3 Gerçek Yangın": "kampus"}
+
+# TS-10: kamera olasılığı bunu ilk kez geçince günlüğe "duman/alev gördü" yazılır
+KAMERA_GORDU_ESIK = 0.25
+
+ASISTAN_ULASILAMIYOR = "Asistana ulaşılamıyor, 112'yi arayın."   # FOG-05
+
 
 # ---- Model çağrıları ----
 @st.cache_data(show_spinner=False)
@@ -78,6 +86,26 @@ def senaryo_yukle(dosya_adi: str) -> list:
         return json.load(f)
 
 
+def prosedur_yukle(seviye: str) -> list:
+    # kb/prosedur_adimlari.jsonl: her satır bir adım; istenen seviyedekileri sırasıyla döndürür
+    yol = KOK / "kb" / "prosedur_adimlari.jsonl"
+    with open(yol, encoding="utf-8") as f:
+        satirlar = [json.loads(satir) for satir in f if satir.strip()]
+    return sorted((s for s in satirlar if s["seviye"] == seviye), key=lambda s: s["adim"])
+
+
+def madde_yazisi(maddeler: list) -> str:
+    # [30, 82] -> "(Madde 30, 82)"; madde yoksa boş
+    if not maddeler:
+        return ""
+    return "(Madde " + ", ".join(str(m) for m in maddeler) + ")"
+
+
+def virgullu(sayi: float) -> str:
+    # 0.85 -> "0,85" (Türkçe ondalık)
+    return f"{sayi:.2f}".replace(".", ",")
+
+
 def seviye_kutusu(seviye: str):
     if seviye == "NORMAL":
         st.success("NORMAL — Durum sakin")
@@ -99,6 +127,10 @@ VARSAYILANLAR = {
     "karar": None,              # operatör kararı: None / "ONAY" / "RED"
     "dogrulandi": False,        # bir kez DOGRULANMIS olduysa geri dönmez
     "supheli_baslangic": None,  # ŞÜPHELİ'ye geçilen an (geri sayım için)
+    "prosedur_adim": 0,         # Müdahale Asistanı'nda tamamlanan adım sayısı
+    "duman_goruldu": False,     # "Kamera duman gördü" günlüğe yazıldı mı?
+    "alev_goruldu": False,      # "Kamera alev gördü" günlüğe yazıldı mı?
+    "asistan_cevabi": None,     # soru kutusundan gelen son cevap
 }
 for anahtar, deger in VARSAYILANLAR.items():
     if anahtar not in ss:
@@ -122,9 +154,10 @@ def seviye_degistir(yeni: str):
     ss.seviye = yeni
     if yeni == "SUPHELI" and ss.supheli_baslangic is None:
         ss.supheli_baslangic = time.time()   # geri sayım bu andan başlar
-    if yeni == "DOGRULANMIS":
-        ss.dogrulandi = True
     gunluge_yaz(f"Seviye değişti: {eski} → {yeni}")
+    if yeni == "DOGRULANMIS" and not ss.dogrulandi:
+        ss.dogrulandi = True
+        gunluge_yaz("112 ARANDI (SİMÜLASYON)")   # KK-11: gerçek arama ASLA yapılmaz
 
 
 def senaryoyu_baslat(ad: str):
@@ -164,6 +197,14 @@ else:
     p_sensor = sensor_olasiligi(adim)
     p_goruntu = goruntu_olasiligi(adim)
     ham = fuzyon(p_sensor, p_goruntu)
+
+    # TS-10: kameranın dumanı ve alevi ilk gördüğü anı günlüğe bir kez yaz
+    if not ss.duman_goruldu and p_goruntu["p_duman"] >= KAMERA_GORDU_ESIK:
+        ss.duman_goruldu = True
+        gunluge_yaz(f"Kamera duman gördü (p_duman = {virgullu(p_goruntu['p_duman'])})")
+    if not ss.alev_goruldu and p_goruntu["p_alev"] >= KAMERA_GORDU_ESIK:
+        ss.alev_goruldu = True
+        gunluge_yaz(f"Kamera alev gördü (p_alev = {virgullu(p_goruntu['p_alev'])})")
 
     yeni = seviye_belirle(ham)
 
@@ -218,6 +259,51 @@ else:
             gunluge_yaz("Operatör reddetti: yanlış alarm")
             seviye_degistir("NORMAL")
             st.rerun()
+
+    # ---- Müdahale Asistanı (yalnızca DOĞRULANMIŞ'ta) ----
+    if ss.seviye == "DOGRULANMIS":
+        st.divider()
+        st.subheader("Müdahale Asistanı")
+        prosedur = prosedur_yukle("DOGRULANMIS")
+
+        # Tamamlanan adımlar üstte ✓ ile; sonraki adımlar gizli (KK-09)
+        for p in prosedur[:ss.prosedur_adim]:
+            st.write(f"✓ {p['adim']}. {p['eylem']} {madde_yazisi(p['ilgili_madde'])}")
+
+        if ss.prosedur_adim < len(prosedur):
+            p = prosedur[ss.prosedur_adim]
+            st.markdown(f"**{p['adim']}. {p['eylem']}** {madde_yazisi(p['ilgili_madde'])}")
+            st.caption(p["aciklama"])
+            if st.button("Tamamlandı", type="primary", key=f"tamam_{ss.prosedur_adim}"):
+                ss.prosedur_adim += 1
+                gunluge_yaz(f"Adım {p['adim']} tamamlandı: {p['eylem']}")
+                if ss.prosedur_adim == len(prosedur):
+                    gunluge_yaz("Prosedür tamamlandı")
+                st.rerun()
+        else:
+            st.success("Prosedür tamamlandı")
+
+        # ---- Serbest soru kutusu (FG-09, FG-10, KK-03) ----
+        # form: yazarken sayfa yenilenmesin, yalnızca "Sor"a basınca gönderilsin
+        with st.form("soru_formu", clear_on_submit=False):
+            soru = st.text_input("Soru sor:")
+            sor = st.form_submit_button("Sor")
+        if sor and soru.strip():
+            gunluge_yaz(f"Asistana soruldu: {soru.strip()}")
+            with st.spinner("Asistan cevaplıyor..."):
+                try:
+                    from src.rag import asistan_cevapla   # paket/Chroma yoksa burada hata verir
+                    ss.asistan_cevabi = asistan_cevapla(soru.strip(), BINA_TIPLERI[ss.senaryo], ss.senaryo)
+                except Exception as hata:
+                    # Uygulama çökmesin; ama sebebi görünsün ki düzeltebilelim
+                    ss.asistan_cevabi = {"cevap": ASISTAN_ULASILAMIYOR, "kaynaklar": [],
+                                         "hata": f"{type(hata).__name__}: {hata}"}
+        if ss.asistan_cevabi:
+            st.info(ss.asistan_cevabi["cevap"])
+            if ss.asistan_cevabi["kaynaklar"]:
+                st.caption("Kaynaklar: " + ", ".join(f"Madde {m}" for m in ss.asistan_cevabi["kaynaklar"]))
+            if ss.asistan_cevabi.get("hata"):
+                st.caption(f"Teknik ayrıntı: {ss.asistan_cevabi['hata']}")
 
 # ---- Olay günlüğü ----
 st.divider()
