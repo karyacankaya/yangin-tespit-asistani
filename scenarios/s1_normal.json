@@ -1,8 +1,164 @@
 [
-    {"saniye": 0, "sensor_satiri": {"Temperature[C]": 22.1, "Humidity[%]": 48.2, "TVOC[ppb]": 120, "eCO2[ppm]": 410, "PM2.5": 1.2}, "kare": "s1_kare_00.jpg", "sahte_p_sensor": 0.05, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.0}},
-    {"saniye": 1, "sensor_satiri": {"Temperature[C]": 22.2, "Humidity[%]": 48.0, "TVOC[ppb]": 118, "eCO2[ppm]": 412, "PM2.5": 1.3}, "kare": "s1_kare_01.jpg", "sahte_p_sensor": 0.04, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.0}},
-    {"saniye": 2, "sensor_satiri": {"Temperature[C]": 22.1, "Humidity[%]": 48.3, "TVOC[ppb]": 125, "eCO2[ppm]": 408, "PM2.5": 1.1}, "kare": "s1_kare_02.jpg", "sahte_p_sensor": 0.06, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.02}},
-    {"saniye": 3, "sensor_satiri": {"Temperature[C]": 22.3, "Humidity[%]": 48.1, "TVOC[ppb]": 122, "eCO2[ppm]": 411, "PM2.5": 1.2}, "kare": "s1_kare_03.jpg", "sahte_p_sensor": 0.05, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.0}},
-    {"saniye": 4, "sensor_satiri": {"Temperature[C]": 22.2, "Humidity[%]": 47.9, "TVOC[ppb]": 119, "eCO2[ppm]": 409, "PM2.5": 1.2}, "kare": "s1_kare_04.jpg", "sahte_p_sensor": 0.04, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.01}},
-    {"saniye": 5, "sensor_satiri": {"Temperature[C]": 22.2, "Humidity[%]": 48.0, "TVOC[ppb]": 121, "eCO2[ppm]": 410, "PM2.5": 1.3}, "kare": "s1_kare_05.jpg", "sahte_p_sensor": 0.05, "sahte_goruntu": {"p_alev": 0.0, "p_duman": 0.0}}
-  ]
+  {
+    "saniye": 0,
+    "sensor_satiri": {
+      "Temperature[C]": 20.0,
+      "Humidity[%]": 57.36,
+      "TVOC[ppb]": 0.0,
+      "eCO2[ppm]": 400.0,
+      "Raw H2": 12306.0,
+      "Raw Ethanol": 18520.0,
+      "Pressure[hPa]": 939.735,
+      "PM1.0": 0.0,
+      "PM2.5": 0.0,
+      "NC0.5": 0.0,
+      "NC1.0": 0.0,
+      "NC2.5": 0.0
+    },
+    "kare": "AoF06858.jpg",
+    "kaynak": {
+      "csv_satiri": 0,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.107,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  },
+  {
+    "saniye": 1,
+    "sensor_satiri": {
+      "Temperature[C]": 20.146,
+      "Humidity[%]": 52.15,
+      "TVOC[ppb]": 0.0,
+      "eCO2[ppm]": 400.0,
+      "Raw H2": 12454.0,
+      "Raw Ethanol": 19230.0,
+      "Pressure[hPa]": 939.757,
+      "PM1.0": 0.89,
+      "PM2.5": 3.71,
+      "NC0.5": 0.0,
+      "NC1.0": 4.289,
+      "NC2.5": 2.73
+    },
+    "kare": "AoF06875.jpg",
+    "kaynak": {
+      "csv_satiri": 10,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.052,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  },
+  {
+    "saniye": 2,
+    "sensor_satiri": {
+      "Temperature[C]": 20.291,
+      "Humidity[%]": 50.15,
+      "TVOC[ppb]": 0.0,
+      "eCO2[ppm]": 400.0,
+      "Raw H2": 12491.0,
+      "Raw Ethanol": 19456.0,
+      "Pressure[hPa]": 939.729,
+      "PM1.0": 0.38,
+      "PM2.5": 1.6,
+      "NC0.5": 0.0,
+      "NC1.0": 1.855,
+      "NC2.5": 1.18
+    },
+    "kare": "AoF06892.jpg",
+    "kaynak": {
+      "csv_satiri": 20,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.094,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  },
+  {
+    "saniye": 3,
+    "sensor_satiri": {
+      "Temperature[C]": 20.434,
+      "Humidity[%]": 50.68,
+      "TVOC[ppb]": 16.0,
+      "eCO2[ppm]": 435.0,
+      "Raw H2": 12481.0,
+      "Raw Ethanol": 19509.0,
+      "Pressure[hPa]": 939.772,
+      "PM1.0": 0.14,
+      "PM2.5": 0.5,
+      "NC0.5": 0.12,
+      "NC1.0": 0.569,
+      "NC2.5": 0.34
+    },
+    "kare": "AoF06858.jpg",
+    "kaynak": {
+      "csv_satiri": 30,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.045,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  },
+  {
+    "saniye": 4,
+    "sensor_satiri": {
+      "Temperature[C]": 20.575,
+      "Humidity[%]": 54.67,
+      "TVOC[ppb]": 7.0,
+      "eCO2[ppm]": 406.0,
+      "Raw H2": 12498.0,
+      "Raw Ethanol": 19553.0,
+      "Pressure[hPa]": 939.766,
+      "PM1.0": 0.06,
+      "PM2.5": 0.19,
+      "NC0.5": 0.05,
+      "NC1.0": 0.219,
+      "NC2.5": 0.131
+    },
+    "kare": "AoF06875.jpg",
+    "kaynak": {
+      "csv_satiri": 40,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.045,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  },
+  {
+    "saniye": 5,
+    "sensor_satiri": {
+      "Temperature[C]": 20.715,
+      "Humidity[%]": 56.36,
+      "TVOC[ppb]": 6.0,
+      "eCO2[ppm]": 416.0,
+      "Raw H2": 12503.0,
+      "Raw Ethanol": 19580.0,
+      "Pressure[hPa]": 939.711,
+      "PM1.0": 0.01,
+      "PM2.5": 0.05,
+      "NC0.5": 0.01,
+      "NC1.0": 0.056,
+      "NC2.5": 0.033
+    },
+    "kare": "AoF06892.jpg",
+    "kaynak": {
+      "csv_satiri": 50,
+      "gercek_etiket": 0
+    },
+    "kayitli_p_sensor": 0.097,
+    "kayitli_goruntu": {
+      "p_alev": 0.0,
+      "p_duman": 0.0
+    }
+  }
+]
