@@ -283,7 +283,11 @@ else:
     if ss.seviye == "DOGRULANMIS":
         st.divider()
         st.subheader("Müdahale Asistanı")
-        prosedur = prosedur_yukle("DOGRULANMIS")
+        try:
+            prosedur = prosedur_yukle("DOGRULANMIS")
+        except Exception:
+            st.error("Prosedür dosyası okunamadı. 112'yi arayın.")
+            prosedur = []
 
         # Tamamlanan adımlar üstte ✓ ile; sonraki adımlar gizli (KK-09)
         for p in prosedur[:ss.prosedur_adim]:
@@ -299,7 +303,7 @@ else:
                 if ss.prosedur_adim == len(prosedur):
                     gunluge_yaz("Prosedür tamamlandı")
                 st.rerun()
-        else:
+        elif prosedur:
             st.success("Prosedür tamamlandı")
 
         # ---- Serbest soru kutusu (FG-09, FG-10, KK-03) ----
